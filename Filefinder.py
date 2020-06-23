@@ -7,11 +7,11 @@ path_container = []
 choice_list = []
 choice_list_dict = {}
 users_file_choice = ""
-available_drives = ['%s:\\' % d for d in string.ascii_uppercase if os.path.exists('%s:\\' % d)]
+available_drives = ['%s:\\' % d for d in string.ascii_uppercase if os.path.exists('%s:\\' % d)]     #variables
 
 
-def file_search_process(x):
-    for r, d, f in os.walk(x):
+def file_search_process(x):                                                                         #file_search_process function
+    for r, d, f in os.walk(x):                                                                      #.walk methode
         if searched_file in f:
             path_container.append(os.path.join(r, searched_file))
             for x in path_container:
